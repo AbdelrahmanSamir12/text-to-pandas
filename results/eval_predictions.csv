@@ -1,0 +1,201 @@
+Input,Ground_Truth,Prediction,Exact_Match
+"table: table_name_22 (team_1 : object)
+question: WHAT IS THE 2ND LEG WITH TEAM 1 OF SPORTING?","result = table_name_22[table_name_22['team_1'] == ""sporting""][['2 as nd_leg']]","result = table_name_22.sort_values(by='team_1', ascending=False)[['2 as nd_leg']]",False
+"table: table_name_86 (against : int64 , opposing_team : object)
+question: Sum of cuyo selection as the opposing team?","result = table_name_86[table_name_86['opposing_team'] == selection""][['sum(against)']]","result = table_name_86.sort_values(by='opposing_team', ascending=False)[['sum(against)']]",False
+"table: table_name_46 (against : int64 , status : object , date : object)
+question: Lowest against for tour match on 21 july 1990?","result = table_name_46[table_name_46['status'] == 1990""][['min(against)']]","result = table_name_46[table_ name_46['status'] == 1990""][['min(against)']]",False
+"table: table_name_85 (version : int64 , code : object , year : object)
+question: Name the lowest version with a code of u+1034a that began after 2001.",result = table_name_85[table_name_85['code'] > 2001][['min(version)']],result = table_name_85.groupby('version').size().reset_index(name='count').sort_values(ascending=False)),False
+"table: table_name_21 (character : object , version : object , name : object)
+question: What character was the version 5.1 and had a Greek capital letter Archaic Sampi?","result = table_name_21[table_name_21['version'] == sampi""][['character']]","result = table_name_21[table_ name_21['version'] == sampi""][['character']]",False
+"table: table_name_89 (version : int64 , name : object , year : object)
+question: Give the sum of the version with the coptic small letter sampi, and a year after 2005.",result = table_name_89[table_name_89['name'] > 2005][['sum(version)']],"result = table_name_89.sort_values(by='name', ascending=True)[['sum(version)']]",False
+"table: table_name_89 (year : int64 , name : object)
+question: What is the year that has a name with the Greek small letter sampi?","result = table_name_89[table_name_89['name'] == sampi""][['sum(year)']]","result = table_name_89.sort_values(by='name', ascending=False)[['sum(year)']]",False
+"table: table_name_95 (country : object , player : object)
+question: What country id Bob Rosburg from?","result = table_name_95[table_name_95['player'] == rosburg""][['country']]","result = table_name_95[table_name__95['player'] == rosburg""][['country']]",False
+"table: table_name_14 (country : object , score : object)
+question: What country has a score of 73-72-67=212?",result = table_name_14[table_name_14['score'] == 212][['country']],"result = table_name_14.sort_values(by='score', ascending=False)[['country']]",False
+"table: table_name_89 (to_par : object , player : object)
+question: What is Mike Souchak's to par?","result = table_name_89[table_name_89['player'] == souchak""][['to_par']]","result = table_name_89[table_ name_89['player'] == souchak""][['to_par']]",False
+"table: table_name_70 (to_par : object , player : object)
+question: What is Mike Souchak's to par score?","result = table_name_70[table_name_70['player'] == souchak""][['to_par']]","result = table_name_70[table_ name_70['player'] == souchak""][['to_par']]",False
+"table: table_name_4 (finish : object , total : object)
+question: What was the finish for the golfer with a total of 285?",result = table_name_4[table_name_4['total'] == 285][['finish']],result = table_name_4[table_ name_4['total'] == 285][['finish']],False
+"table: table_name_20 (total : object , year_s__won : object)
+question: What was the total for the golfer who had a year won of 1987?","result = table_name_20[table_name_20['year_s__won'] == ""1987""][['total']]",result = table_name_20[table_ name_20['year_s__won'] == 1987][['total']],False
+"table: table_name_91 (finish : object , to_par : object)
+question: What was the finish for the golfer with a To par of +2?","result = table_name_91[table_name_91['to_par'] == ""+2""][['finish']]","result = table_name_91[table_ name_91['to_par'] == ""+2""][['finish']]",False
+"table: table_name_9 (total : int64 , to_par : object , year_s__won : object)
+question: What was the total for the golfer who had a To par of +10 and year won of 1971?","result = table_name_9[table_name_9['to_par'] == ""1971""][['sum(total)']]",result = result[result['to_par'] == 1971][['sum(total)']],False
+"table: table_name_36 (team : object , game : object , score : object)
+question: What team played before game 71 and had a score w 91–86 (ot)?","result = table_name_36[table_name_36['game'] < (ot)""][['team']]","result = table_name_36[table_ name_36['game'] < (ot)""][['team']]",False
+"table: table_name_15 (high_assists : object , game : object)
+question: What was the high assist for game 66?",result = table_name_15[table_name_15['game'] == 66][['high_assists']],result = table_name_15[table_ name_15['game'] == 66][['high_assists']],False
+"table: table_name_39 (country : object , player : object)
+question: What is josé maría olazábal's country?","result = table_name_39[table_name_39['player'] == olazábal""][['country']]","result = table_name_39[table_ name_39['player'] == olazábal""][['country']]",False
+"table: table_name_86 (player : object , score : object)
+question: Which Player has a Score of 74-67-74-71=286?",result = table_name_86[table_name_86['score'] == 286][['player']],result = table_name_86[table_ name_86['score'] == 286][['player']],False
+"table: table_name_69 (place : object , country : object , player : object)
+question: Which Place has a Country of united states, and a Player of corey pavin?","result = table_name_69[table_name_69['country'] == pavin""][['place']]","result = table_name_69[table_ name_69['country'] == pavin""][['place']]",False
+"table: table_name_65 (opponent : object , week : object)
+question: Who is the opponent in week 15?",result = table_name_65[table_name_65['week'] == 15][['opponent']],result = table_name_65[table_ name_65['week'] == 15][['opponent']],False
+"table: table_name_57 (attendance : int64 , result : object)
+question: What is the highest attendance a result of W 30-7?","result = table_name_57[table_name_57['result'] == 30-7""][['max(attendance)']]","result = table_name_57[table_ name_57['result'] == 30-7""][['max(attendance)']]",False
+"table: table_name_22 (attendance : int64 , week : object , date : object)
+question: What is the average attendance at week earlier than 6 on October 14, 2001?","result = table_name_22[table_name_22['week'] < 2001""]['attendance'].mean()","result = table_name_22[table_ name_22['week'] < 2001""]['attendance'].mean()",False
+"table: table_name_8 (record : object , method : object , round : object)
+question: what is the record when the method is submission (armbar) and the round is less than 3?",result = table_name_8[table_name_8['method'] < 3][['record']],result = table_name_8[table_ name_8['method'] < 3][['record']],False
+"table: table_name_12 (points : int64 , name : object , lost : object)
+question: How many average points did svg burgkirchen have with a loss smaller than 6?",result = table_name_12[table_name_12['name'] < 6]['points'].mean(),result = table_name_12.groupby('name').agg({ 'sum': 'max' }).reset_index(),False
+"table: table_name_4 (name : object , points : object , drawn : object)
+question: Who had points smaller than 22 and a drawn of 2?",result = table_name_4[table_name_4['points'] < 2][['name']],"result = table_name_4.sort_values(by='points', ascending=False)[['name']]",False
+"table: table_name_75 (name : object , lost : object , position : object)
+question: Who lost 2 and had a position bigger than 1?",result = table_name_75[table_name_75['lost'] > 1][['name']],result = table_name_75[table_ name_75['lost'] > 1][['name']],False
+"table: table_name_62 (catalog : object , year : object , issued_title : object , label : object)
+question: What is the name of the catalog issued with the title of 1958 Miles on the Sony label at a year prior to 2006?",result = table_name_62[table_name_62['issued_title'] < 2006][['catalog']],"result = table_name_62[table_ name_62['issued_title'] < ""miles""][['catalog']]",False
+"table: table_name_16 (label : object , year : int64)
+question: What is the label of the Year before 1979?",result = table_name_16[table_name_16['year'] < 1979][['label']],result = table_name_16.groupby('year').agg({ 'label' }).reset_index(),False
+"table: table_name_74 (tournament : object)
+question: WHAT IS THE 2011 PERFORMANCE AT THE MIAMI MASTERS?","result = table_name_74[table_name_74['tournament'] == masters""][['2011']]",result = table_name_74.groupby('tournament').size().reset_index(name='count'),False
+"table: table_name_45 (Id : object)
+question: WHAT IS THE 2008 PERFORMANCE WITH A 2007 CAREER STATISTICS?","result = table_name_45[table_name_45['2007'] == statistics""][['2008']]","result = table_name_45['2007'] == ""career""][['2008']]",False
+"table: table_name_5 (tournament : object)
+question: WHAT IS THE TOURNAMENT WITH A 2010 OF A, 2009 OF A, AND 001 PERFORMANCE OF Q1?","result = table_name_5[table_name_5['2010'] == ""q1""][['tournament']]",result = table_name_5.groupby('tournament').size().reset_index(name='count'),False
+"table: table_name_77 (Id : object)
+question: WHAT IS THE 2009 PERFORMANCE WITH A 2012 OF 2R, 2001 OF 1R, 2007 OF A, AND 2008 OF A?","result = table_name_77[table_name_77['2012'] == ""a""][['2009']]",result = table_name_77.groupby('2012').size().reset_index(name='count').sort_values(ascending=False)),False
+"table: table_name_90 (Id : object)
+question: WHAT IS THE 2011 PERFORMANCE WITH A 2007 OF Q3?","result = table_name_90[table_name_90['2007'] == ""q3""][['2011']]",result = table_name_90.groupby('2007').size().reset_index(name='count').sort_values(ascending=False)),False
+"table: table_name_95 (score : object , place : object)
+question: Which Score has a Place of t2?","result = table_name_95[table_name_95['place'] == ""t2""][['score']]","result = table_name_95[table_ name_95['place'] == ""t2""][['score']]",False
+"table: table_name_93 (score : object , country : object)
+question: What was spain's score?","result = table_name_93[table_name_93['country'] == ""spain""][['score']]","result = table_name_93.sort_values(by='country', ascending=False)[['score']]",False
+"table: table_name_97 (to_par : object , score : object)
+question: Which To par has a Score of 70-73-80-68=291?",result = table_name_97[table_name_97['score'] == 291][['to_par']],result = table_name_97[table_ name_97['score'] == 291][['to_par']],False
+"table: table_name_12 (country : object , place : object , player : object)
+question: From what Country is T6 Place Player Tom Weiskopf?","result = table_name_12[table_name_12['place'] == weiskopf""][['country']]","result = table_name_12[table_ name_12['place'] == weiskopf""][['country']]",False
+"table: table_name_13 (place : object , to_par : object , player : object)
+question: With a To par of –2, what is Johnny Miller's Place?","result = table_name_13[table_name_13['to_par'] == miller""][['place']]","result = table_name_13[table_ name_13['to_par'] == miller""][['place']]",False
+"table: table_name_80 (country : object , player : object)
+question: From what Country is Gene Borek?","result = table_name_80[table_name_80['player'] == borek""][['country']]","result = table_name_80[table_ name_80['player'] == borek""][['country']]",False
+"table: table_name_46 (country : object , to_par : object)
+question: What is the Country of the Player with a To par of –5?","result = table_name_46[table_name_46['to_par'] == ""–5""][['country']]","result = table_name_46[table_name__46['to_par'] == ""–5""][['country']]",False
+"table: table_name_18 (place : object , country : object)
+question: What is the Place of the Player from New Zealand?","result = table_name_18[table_name_18['country'] == zealand""][['place']]","result = table_name_18[table_ name_18['country'] == new Zealand""][['place']]",False
+"table: table_name_28 (place : object , score : object)
+question: What is the Place of the Player with a Score of 70-68=138?",result = table_name_28[table_name_28['score'] == 138][['place']],result = table_name_28[table_ name_28['score'] == 138][['place']],False
+"table: table_name_88 (losses : int64 , wins : object , last_appearance : object)
+question: What is the highest Losses, when Wins is greater than 1, and when Last Appearance is 2003?","result = table_name_88[table_name_88['wins'] > ""2003""][['max(losses)']]",result = table_name_88[table_ name_88['wins'] > 2003][['max(losses)']],False
+"table: table_name_67 (wins : int64 , appearances : object , percent : object , school : object)
+question: What is the highest Wins, when Percent is 0.000, when School is Oklahoma State, and when Appearances is less than 1?",result = table_name_67[table_name_67['percent'] < 1][['max(wins)']],result = table_name_67[table_ name_67['percent'] < 1][['max(wins)']],False
+"table: table_name_85 (losses : object , last_appearance : object , wins : object)
+question: What is the total number of Losses, when Last Appearance is 2003, and when Wins is greater than 2?",result = table_name_85[table_name_85['last_appearance'] > 2][['count(losses)']],result = table_name_85[table_ name_85['last_appearance'] > 2][['count(losses)']],False
+"table: table_name_65 (last_appearance : object , school : object , wins : object , losses : object)
+question: What is Last Appearance, when Wins is less than 1, when Losses is 1, and when School is Oklahoma State?","result = table_name_65[table_name_65['wins'] < state""][['last_appearance']]","result = table_name_65[table_ name_65['wins'] < state""][['last_appearance']]",False
+"table: table_name_34 (college : object , pick : object , player : object)
+question: What is College, when Pick is less than 145, and when Player is Jeff Wilkins?","result = table_name_34[table_name_34['pick'] < wilkins""][['college']]","result = table_name_34[table_ name_34['pick'] < wilkins""][['college']]",False
+"table: table_name_2 (nationality : object , college : object)
+question: What is Nationality, and when College is Illinois State?","result = table_name_2[table_name_2['college'] == state""][['nationality']]","result = table_name_2.sort_values(by='college', ascending=False)[['nationality', 'college']]",False
+"table: table_name_5 (nationality : object , round : object)
+question: What is Nationality, when Round is 6?",result = table_name_5[table_name_5['round'] == 6][['nationality']],"result = table_name_5[table_ name_5['round'] == ""6""][['nationality']]",False
+"table: table_name_39 (round : object , college : object)
+question: What is the total number of Round, when College is Northern Illinois?","result = table_name_39[table_name_39['college'] == illinois""][['count(round)']]","result = table_name_39[table_ name_39['college'] == illinois""][['count(round)']]",False
+"table: table_name_85 (bronze : int64 , gold : object , total : object , silver : object)
+question: What is the average bronze when the total is 2, silver is less than 1 and gold is more than 1?",result = table_name_85[table_name_85['total'] > 1]['bronze'].mean(),result = table_name_85[table_ name_85['total'] > 1]['bronze'].mean(),False
+"table: table_name_66 (silver : int64 , total : int64)
+question: what is the average silver when the total is more than 20?",result = table_name_66[table_name_66['total'] > 20]['silver'].mean(),result = table_name_66['total'] > 20]['silver'].mean(),False
+"table: table_name_23 (rank : int64 , nation : object , bronze : object)
+question: what is the highest rank when the nation is united states (usa) and bronze is more than 1?",result = table_name_23[table_name_23['nation'] > 1][['max(rank)']],result = table_name_23[table_ name_23['nation'] > 1][['max(rank)']],False
+"table: table_name_99 (total : int64 , silver : object , nation : object , bronze : object , gold : object)
+question: what is the average total when bronze is more than 0, gold is 0, the nation is united states (usa) and silver is 0?",result = table_name_99[table_name_99['bronze'] > 0]['total'].mean(),result = table_name_99[table_ name_99['bronze'] > 0]['total'].mean(),False
+"table: table_name_67 (res : object , opponent : object)
+question: What was the resolution for the fight against enrique guzman?","result = table_name_67[table_name_67['opponent'] == guzman""][['res']]","result = table_name_67[table_ name_67['opponent'] == guzman""][['res']]",False
+"table: table_name_20 (res : object , record : object)
+question: What was the resolution of the fight when Nate Mohr's record was 8-6?","result = table_name_20[table_name_20['record'] == ""8-6""][['res']]","result = table_name_20[table_ name_20['record'] == mohr""][['res']]",False
+"table: table_name_37 (third : int64 , club : object , rank : object)
+question: What is the smallest number of third place earned for the Es Sahel at a rank less than 3?",result = table_name_37[table_name_37['club'] < 3][['min(third)']],result = table_name_37.groupby('club').agg({ 'min': 'min' }).reset_index(),False
+"table: table_name_12 (club : object , third : object , runners_up : object , winners : object)
+question: Which club has 1 runners-up with 0 winners and 2 third place earned?",result = table_name_12[table_name_12['runners_up'] == 2][['club']],result = result[result['runners_up'] == 2][['club']],False
+"table: table_name_10 (name : object , total_point : object , bonus : object , only_point : object)
+question: What is Name, when Bonus is greater than 1, when Only Point is greater than 7, and when Total Point is less than 21?",result = table_name_10[table_name_10['bonus'] > 21][['name']],result = table_name_10[table_ name_10['bonus'] > 21][['name']],False
+"table: table_name_47 (name : object , total_point : object , bonus : object , only_point : object , catch_taken : object)
+question: What is Name, when Only Point is greater than 1, when Catch Taken is greater than 3, when Bonus is greater than 4, and when Total Point is less than 30?",result = table_name_47[table_name_47['only_point'] > 30][['name']],result = table_name_47[table_ name_47['only_point'] > 30][['name']],False
+"table: table_name_11 (grid : object , laps : object , manufacturer : object , rider : object)
+question: How many grids does Ducati have with Casey Stoner as a rider with fewer than 27 laps?",result = table_name_11[table_name_11['manufacturer'] < 27][['count(grid)']],result = result[result['manufacturer'] < 27][['count(grid)']],False
+"table: table_name_11 (manufacturer : object , time : object)
+question: Which manufacturer has a time of +10.142?","result = table_name_11[table_name_11['time'] == ""+10.142""][['manufacturer']]","result = table_name_11.sort_values(by='time', ascending=False)[['manufacturer']]",False
+"table: table_name_30 (time : object , rider : object)
+question: What is Loris Capirossi's time?","result = table_name_30[table_name_30['rider'] == capirossi""][['time']]","result = table_name_30[table_ name_30['rider'] == capirossi""][['time']]",False
+"table: table_name_52 (laps : int64 , grid : object , time_retired : object)
+question: What were the highest laps when the grid was larger than 19 and the time/retired was fuel?","result = table_name_52[table_name_52['grid'] > ""fuel""][['max(laps)']]",result = table_name_52[table_ name_52['grid'] > 19][['max(laps)']],False
+"table: table_name_80 (team : object , driver : object , laps : object , grid : object)
+question: Which team did Scott Pruett drive for when the grid was smaller than 20 and there were 65 laps?","result = table_name_80[table_name_80['laps'] < pruett""][['team']]","result = table_name_80[table_name__80['laps'] < Pruett""][['team']]",False
+"table: table_name_94 (date : object , lot_no : object , boiler_type : object , built_at : object)
+question: What year is the date when the boiler type is forward topfeed, the built at is Crewe, and lot number is less than 187?",result = table_name_94[table_name_94['boiler_type'] < 187][['count(date)']],result = table_name_94[table_ name_94['boiler_type'] < 187][['date']],False
+"table: table_name_62 (date : object , goal : object)
+question: What was the date of the game where Esteban Paredes scored 2 goals?",result = table_name_62[table_name_62['goal'] == 2][['date']],"result = table_name_62[table_ name_62['goal'] == paredes""][['date']]",False
+"table: table_name_82 (attendance : int64 , opponent : object , week : object)
+question: What is the highest attendance when the opponent is the Los Angeles Rams and the week is less than 11?",result = table_name_82[table_name_82['opponent'] < 11][['max(attendance)']],result = table_name_82[table_ name_82['opponent'] < 11][['max(attendance)']],False
+"table: table_name_60 (result : object , week : object , opponent : object)
+question: What is the result when the week is greater than 7 and the Houston Oilers were the opponent?","result = table_name_60[table_name_60['week'] > oilers""][['result']]","result = result[table_name_60['week'] > Oilers""][['result']]",False
+"table: table_name_4 (record : object , location_attendance : object)
+question: What is Record, when Location Attendance is ""Izod Center 16,911""?","result = table_name_4[table_name_4['location_attendance'] == 16,911""][['record']]","result = table_name_4[table_ name_4['location_attendance'] == 16,911""][['record']]",False
+"table: table_name_86 (high_rebounds : object , high_assists : object)
+question: What is High Rebounds, when High Assists is ""Delonte West (10)""?","result = table_name_86[table_name_86['high_assists'] == (10)""][['high_rebounds']]","result = table_name_86[table_ name_86['high_assists'] == (10)""][['count(high_rebounds)']]",False
+"table: table_name_16 (catalog : object , label : object , format : object)
+question: What catalog had an Epic Records label in CD format?","result = table_name_16[table_name_16['label'] == ""cd""][['catalog']]","result = table_name_16[table_name__16['label'] == ""cd""][['catalog']]",False
+"table: table_name_37 (label : object , region : object)
+question: Which label is in Australia?","result = table_name_37[table_name_37['region'] == ""australia""][['label']]","result = table_name_37[table_ name_37['region'] == ""australia""][['label']]",False
+"table: table_name_38 (record : object , time : object)
+question: The match that lasted 2:43 has what record?","result = table_name_38[table_name_38['time'] == ""2:43""][['record']]","result = table_name_38[table_ name_38['time'] == ""2:43""][['record']]",False
+"table: table_name_54 (method : object , venue : object)
+question: The match that was held at Club Med Sandpiper has what method?","result = table_name_54[table_name_54['venue'] == sandpiper""][['method']]","result = table_name_54[table_ name_54['venue'] == sandpiper""][['method']]",False
+"table: table_name_83 (record : object , opponent : object , time : object , venue : object)
+question: The match of at Michael's Eighth Avenue venue against Tim Coleman that went 3:00 has what record?","result = table_name_83[table_name_83['time'] == coleman""][['record']]","result = table_name_83[table_ name_83['time'] == Coleman""][['record']]",False
+"table: table_name_88 (method : object , venue : object)
+question: What method did the match at Club Med Sandpiper have?","result = table_name_88[table_name_88['venue'] == sandpiper""][['method']]","result = table_name_88[table_ name_88['venue'] == sandpiper""][['method']]",False
+"table: table_name_87 (label : object , catalog : object)
+question: What is the Label of the release with Catalog number LPM-2899?","result = table_name_87[table_name_87['catalog'] == ""lpm-2899""][['label']]","result = result[result['catalog'] == ""lpm-2899""][['label']]",False
+"table: table_name_57 (date : object , label : object , catalog : object)
+question: What is the Date of the RCA release with Catalog number SF-7635?","result = table_name_57[table_name_57['label'] == ""sf-7635""][['date']]","result = table_name_57[table_ name_57['label'] == ""sf-7635""][['date']]",False
+"table: table_name_58 (catalog : object , label : object)
+question: What is the Catalog of the RCA release?","result = table_name_58[table_name_58['label'] == ""rca""][['catalog']]","result = table_name_58.sort_values(by='label', ascending=False)[['catalog']]",False
+"table: table_name_79 (catalog : object , format : object , label : object)
+question: What is the Catalog number of the CD Reissue Universal release?","result = table_name_79[table_name_79['format'] == ""universal""][['catalog']]","result = table_name_79[table_name__79['format'] == release""][['catalog']]",False
+"table: table_name_75 (label : object , format : object , catalog : object)
+question: What is the Label of the release on Stereo vinyl LP with Catalog number SF-7635?","result = table_name_75[table_name_75['format'] == ""sf-7635""][['label']]","result = table_name_75[table_ name_75['format'] == ""sf-7635""][['label']]",False
+"table: table_name_84 (other : object , joe_sestak__d_ : object , margin_of_error : object , pat_toomey__r_ : object)
+question: WHAT CANDIDATE HAD A MARGIN OF ERROR OF ± 4.5%, WHEN PAT TOOMEY WAS 45% AND JOE SESTAK WAS 38%?","result = table_name_84[table_name_84['margin_of_error'] == ""38%""][['other']]","result = result[result['margin_of_error'] == 38%""][['other']]",False
+"table: table_name_49 (date_s__administered : object , joe_sestak__d_ : object , margin_of_error : object)
+question: WHAT DATE DID JOE SESTAK HAVE 46% WITH ± 3.0% MARGIN OF ERROR?","result = table_name_49[table_name_49['joe_sestak__d_'] == 3.0%""][['date_s__administered']]","result = result[result['joe_sestak__d_'] == ± 3.0%""][['date_s__administered']]",False
+"table: table_name_29 (points__percentage : object , total_w_l_h : object)
+question: WHAT IS THE POINTS PERCENTAGE WITH A TOTAL OF 1-2-2 RECORD?","result = table_name_29[table_name_29['total_w_l_h'] == ""1-2-2""][['points__percentage']]","result = result[result['total_w_l_h'] == ""1-2-2""][['points__percentage']]",False
+"table: table_name_28 (year : object , total_matches : object)
+question: WHAT YEAR HAD 5 TOTAL MATCHES?",result = table_name_28[table_name_28['total_matches'] == 5][['year']],result = table_name_28[table_ name_28['total_matches'] == 5][['year']],False
+"table: table_name_76 (quantity_preserved : object , quantity_made : object , class : object)
+question: What is the quantity preserved when 4 were made of class F-21?","result = table_name_76[table_name_76['quantity_made'] == ""f-21""][['quantity_preserved']]","result = table_name_76[table_ name_76['quantity_made'] == ""f-21""][['quantities_preserved']]",False
+"table: table_name_42 (fleet_number_s_ : object , quantity_made : object)
+question: What fleet number had 3 made?","result = table_name_42[table_name_42['quantity_made'] == ""3""][['fleet_number_s_']]","result = table_name_42.sort_values(by='quantity_made', ascending=False)[['fleet_number_s_']]",False
+"table: table_name_36 (class : object , quantity_made : object , fleet_number_s_ : object)
+question: What class had 1 made and fleet number of 406?","result = table_name_36[table_name_36['quantity_made'] == ""406""][['class']]",result = table_name_36[table_ name_36['quantity_made'] == 406][['class']],False
+"table: table_name_56 (class : object , quantity_preserved : object , quantity_made : object)
+question: What class has 0 preserved and 2 made?","result = table_name_56[table_name_56['quantity_preserved'] == ""2""][['class']]",result = table_name_56[table_ name_56['quantity_preserved'] == 2][['class']],False
+"table: table_name_87 (rank : int64 , population : object)
+question: What rank has a population of 4839400?","result = table_name_87[table_name_87['population'] == ""4839400""][['min(rank)']]",result = result[result['population'] == 4839400][['min(rank)']],False
+"table: table_name_14 (rank : object , definition : object)
+question: What's the rank of the Province-Level Municipality?","result = table_name_14[table_name_14['definition'] == municipality""][['rank']]","result = table_name_14.sort_values(by='definition', ascending=False)[['rank']]",False
+"table: table_name_37 (rank : int64 , definition : object , population : object)
+question: What rank was Core Districts + Inner Suburbs and had a population of 10123000?","result = table_name_37[table_name_37['definition'] == ""10123000""][['max(rank)']]","result = table_name_37.sort_values(by='population', ascending=False)[['sum(rank)']]",False
+"table: table_name_17 (points : object , goals_for : object , draws : object , wins : object)
+question: What is Points, when Draws is less than 7, when Wins is less than 16, and when Goals For is ""35""?",result = table_name_17[table_name_17['draws'] < 35][['points']],"result = result[result['draws'] < ""35""][['points']]",False
+"table: table_name_13 (losses : object , draws : object , points : object , position : object , goals_for : object)
+question: What is the total number of Losses, when Position is greater than 8, when Goals For is greater than 34, when Points is ""25"", and when Draws is less than 5?",result = table_name_13[table_name_13['position'] > 5][['count(losses)']],result = table_name_13.groupby('position').agg({ 'count(losses)' }).reset_index(),False
+"table: table_name_32 (wins : int64 , points : int64)
+question: What is the average Wins, when Points is less than ""19""?",result = table_name_32[table_name_32['points'] < 19]['wins'].mean(),"result = table_name_32['points'] < ""19""]['wins'].mean()",False
+"table: table_name_31 (goals_for : int64 , played : int64)
+question: What is the lowest Goals, when Played is greater than 30?",result = table_name_31[table_name_31['played'] > 30][['min(goals_for)']],result = table_name_31['played'] > 30][['min(goals_for)']],False
+"table: table_name_88 (played : int64 , losses : object , position : object)
+question: What is the sum of Played, when Losses is ""13"", and when Position is greater than 11?",result = table_name_88[table_name_88['losses'] > 11][['sum(played)']],result = table_name_88[table_ name_88['losses'] > 11][['sum(played)']],False
+"table: table_name_50 (wins : int64 , played : object , goals_for : object , losses : object , goal_difference : object)
+question: What is the lowest Wins, when Losses is less than 10, when Goal Difference is less than 46, when Goals is less than 63, and when Played is less than 30?",result = table_name_50[table_name_50['losses'] < 30][['min(wins)']],result = table_name_50[table_ name_50['losses'] < 30][['min(wins)']],False

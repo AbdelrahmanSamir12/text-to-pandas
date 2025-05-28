@@ -1,0 +1,45 @@
+[build-system]
+requires = ["flit_core >=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "text_to_pandas"
+version = "0.0.1"
+description = "A short description of the project."
+authors = [
+  { name = "Abdelrahman Samir" },
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License"
+]
+dependencies = [
+    "accelerate>=0.26.0",
+    "datasets>=3.6.0",
+    "evaluate>=0.4.3",
+    "pandas>=2.2.3",
+    "pip",
+    "python-dotenv",
+    "ruff",
+    "scikit-learn>=1.6.1",
+    "torch>=2.7.0",
+    "tqdm>=4.67.1",
+    "transformers>=4.52.3",
+]
+requires-python = "~=3.10.0"
+
+
+[tool.ruff]
+line-length = 99
+src = ["text_to_pandas"]
+include = ["pyproject.toml", "text_to_pandas/**/*.py"]
+
+[tool.ruff.lint]
+extend-select = ["I"]  # Add import sorting
+
+[tool.ruff.lint.isort]
+known-first-party = ["text_to_pandas"]
+force-sort-within-sections = true
+
